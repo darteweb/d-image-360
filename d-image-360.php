@@ -4,7 +4,7 @@ Plugin Name: DImage 360
 Plugin URI: http://www.darteweb.com/
 Version: 1.1
 Author: D'arteweb
-Description: DImage 360 Slider use shortcode [dimage url="http://www.darteweb.com/images/Prague_Getty.jpg"]
+Description: DImage 360 Slider use shortcode [dimage url="please enter here image url"]
 */
 function wp_dimage_msg_form_scripts() {
    
