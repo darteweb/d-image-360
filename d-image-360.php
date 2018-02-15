@@ -8,9 +8,9 @@ Description: DImage 360 Slider use shortcode [dimage url="please enter here imag
 */
 function wp_dimage_msg_form_scripts() {
    
-    wp_enqueue_style('d-style', plugin_dir_url(__FILE__)."css/d-style.css");
-	wp_enqueue_script('photo-sphere-js1', plugin_dir_url(__FILE__).'js/photo-sphere-viewer.min.js',array('jquery'), true);
-    wp_enqueue_script('three-min', plugin_dir_url(__FILE__).'js/three.min.js',array('jquery'), true);
+    wp_enqueue_style('d-style', plugins_url( 'css/d-style.css', __FILE__));
+	wp_enqueue_script('photo-sphere-js1', plugins_url( 'js/photo-sphere-viewer.min.js', __FILE__),array('jquery'), true);
+    wp_enqueue_script('three-min', plugins_url( 'js/three.min.js', __FILE__),array('jquery'), true);
 }
 add_action('wp_enqueue_scripts','wp_dimage_msg_form_scripts');
 
