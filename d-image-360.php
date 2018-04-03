@@ -47,10 +47,17 @@ public function dimage_fun($atts)
 	{
 		echo 'Please enter any URL of image.';	
 	}
+	$file_headers = @get_headers($atts['url']);
+	if(strpos($file_headers[0], 'Not Found') !== false || empty($file_headers))
+	{
+		echo 'Image Not Found.';	
+	}else
+	{
 	?>
         <div id="dtcontainer"></div>
         <?php  
 		self::dimage_inline_script($atts);
+	} 	
         return ob_get_clean();
 }
 }
